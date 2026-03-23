@@ -1,0 +1,70 @@
+<!-- register.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="#" />
+    <!-- script -->
+    <script type="module" src="js/register.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <a class="logo-home-link" href="index.html">DVP</a>
+      </header>
+
+      <main>
+        <h1>Register</h1>
+
+        <div class="form-div">
+          <form class="register-form">
+            <fieldset>
+              <div>
+                <div id="message-container"></div>
+
+                <div>
+                  <div>
+                    <label for="email">Email</label>
+                  </div>
+                  <input
+                    class="register-input"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="email address"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <div>
+                    <label for="password">Password</label>
+                  </div>
+                  <input
+                    class="register-input"
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                    minlength="6"
+                  />
+                </div>
+              </div>
+
+              <button class="register-btn" type="submit">Register</button>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 DVP</p>
+      </footer>
+    </div>
+  </body>
+</html>
