@@ -22,13 +22,13 @@ registerForm.addEventListener('submit', async function (e) {
     });
 
     if (error) {
-      displayMessage('#message-container', 'error', error.message);
+      displayMessage('#js-message-container', 'error', error.message);
       return;
     }
 
     if (data.user) {
       displayMessage(
-        '#message-container',
+        '#js-message-container',
         'success',
         'Registration successful. Check your email to verify your account.',
       );
@@ -36,7 +36,7 @@ registerForm.addEventListener('submit', async function (e) {
     }
   } catch (error) {
     console.log(error);
-    displayMessage('#message.container', 'error', error.toString());
+    displayMessage('#js-message-container', 'error', error.toString());
   } finally {
     fieldset.disabled = false;
   }

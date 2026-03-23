@@ -22,19 +22,19 @@ postForm.addEventListener('submit', async function (e) {
     const { error } = await supabase.from('posts').insert([{ title, content }]);
 
     if (error) {
-      displayMessage('#message.container', 'error', error.message);
+      displayMessage('#js-message-container', 'error', error.message);
       return;
     }
 
     displayMessage(
-      '#message-container',
+      '#js-message-container',
       'success',
       'Post created successfully',
     );
     form.reset();
   } catch (error) {
     console.log(error);
-    displayMessage('#message-container', 'error', error.toString());
+    displayMessage('#js-message-container', 'error', error.toString());
   } finally {
     fieldset.disabled = false;
   }
