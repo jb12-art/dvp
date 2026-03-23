@@ -1,0 +1,78 @@
+<!-- index.html -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link -->
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- script -->
+    <script type="module" src="js/posts.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header>
+        <a class="logo-home-link" href="index.html">DVP</a>
+      </header>
+
+      <main>
+        <!-- logout button -->
+        <div class="logout-btn-div">
+          <button id="logout-btn" class="logout-btn">Logout</button>
+        </div>
+
+        <!--  -->
+        <h1>Home | Posts</h1>
+
+        <!-- register link -->
+        <a class="register-link" href="register.html">Register</a>
+
+        <!-- login link -->
+        <a class="login-link" href="login.html">Login</a>
+
+        <!-- post form -->
+        <h2 class="create-post-title">Create a new post</h2>
+        <!-- form to create posts -->
+        <form class="create-post-form">
+          <div id="message-container"></div>
+
+          <!-- title -->
+          <label for="title">Title</label>
+          <input
+            id="title"
+            name="title"
+            type="text"
+            placeholder="Enter post title"
+            required
+          />
+
+          <!-- content -->
+          <label for="content">Content</label>
+          <textarea
+            id="content"
+            name="content"
+            rows="5"
+            placeholder="Enter post content"
+            required
+          ></textarea>
+
+          <!-- button -->
+          <button type="submit">Create post</button>
+        </form>
+
+        <!-- container to display posts -->
+        <div>
+          <h2>Posts</h2>
+          <div id="posts-list"></div>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 DVP</p>
+      </footer>
+    </div>
+  </body>
+</html>
