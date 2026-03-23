@@ -1,0 +1,139 @@
+/* css/styles.css */
+
+/* index.html, register.html, login.html */
+.logo-home-link {
+  font-size: xx-large;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* index.html, register.html, login.html */
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* index.html, register.html, login.html */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* index.html, register.html, login.html */
+header,
+footer {
+  text-align: center;
+  align-content: center;
+  height: 80px;
+  background-color: lightblue;
+}
+
+/* index.html, register.html, login.html */
+h1,
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* index.html, register.html, login.html */
+main {
+  flex-grow: 1;
+}
+
+/* index.html */
+.logout-btn-div {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+/* index.html */
+.logout-btn {
+  padding: 4px;
+}
+
+/* index.html */
+.register-link,
+.login-link {
+  margin: 0 auto;
+  display: grid;
+  border: solid 1px black;
+  width: 200px;
+  height: 100px;
+  place-items: center;
+}
+/* index.html */
+.register-link:hover,
+.login-link:hover {
+  background-color: black;
+  color: white;
+  font-size: x-large;
+}
+/* index.html */
+.register-link:hover {
+  border-radius: 8px 8px 0px 0px;
+}
+/* index.html */
+.login-link:hover {
+  border-radius: 0px 0px 8px 8px;
+}
+
+/* index.html */
+.register-link,
+.login-link,
+.logout-btn {
+  color: black;
+  font-size: large;
+}
+
+/* register.html, login.html */
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+/* register.html, login.html */
+.register-form,
+.login-form {
+  max-width: fit-content;
+}
+/* register.html, login.html */
+.register-input,
+.login-input {
+  width: 400px;
+  margin-bottom: 15px;
+  border: solid 1px black;
+}
+
+/* index.html */
+.register-btn,
+.logout-btn,
+.login-btn {
+  cursor: pointer;
+}
+/* index.html */
+.logout-btn:hover {
+  background-color: orange;
+}
+
+/* index.html */
+.create-post-title {
+  margin-top: 50px;
+  text-align: center;
+}
+/* index.html */
+.create-post-form {
+  margin: 0 auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+/* index.html */
+textarea {
+  width: 700px;
+  max-width: 692px;
+}
