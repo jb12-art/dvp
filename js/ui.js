@@ -6,14 +6,14 @@ export function displayMessage(container, messageType, message) {
     parent = document.querySelector(container);
   }
 
-  const messageClassess = {
+  const messageClasses = {
     error: 'message message--error',
     success: 'message message--success',
     warning: 'message message--warning',
     info: 'message message--info',
   };
 
-  const classes = messageClassess[messageType] || messageClassess.info;
+  const classes = messageClasses[messageType] || messageClasses.info;
 
   parent.innerHTML = `<div class="${classes}">${message}</div>`;
 }
