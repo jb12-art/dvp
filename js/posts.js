@@ -49,7 +49,15 @@ if (postForm) {
 
       const { error } = await supabase
         .from('posts')
-        .insert([{ title, content, category, submitted_by: user.email }]);
+        .insert([
+          {
+            title,
+            content,
+            category,
+            submitted_by: user.email,
+            user_id: user.id,
+          },
+        ]);
 
       if (error) {
         displayMessage('#js-message-container', 'error', error.message);
