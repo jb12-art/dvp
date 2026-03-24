@@ -41,6 +41,7 @@ if (postForm) {
     const form = e.target;
     const title = form.title.value.trim();
     const content = form.content.value.trim();
+    const category = form.category.value.trim();
     const fieldset = form.querySelector('fieldset') || form;
 
     try {
@@ -48,7 +49,7 @@ if (postForm) {
 
       const { error } = await supabase
         .from('posts')
-        .insert([{ title, content }]);
+        .insert([{ title, content, category, submitted_by: user.email }]);
 
       if (error) {
         displayMessage('#js-message-container', 'error', error.message);
@@ -126,8 +127,25 @@ function createPostElement(post) {
   content.className = 'post-content';
   content.textContent = post.content;
 
+  const category = document.createElement('p');
+  category.className = 'post-category';
+  category.textContent = `Category: ${post.category || 'None'}`;
+
+  const submittedBy = document.createElement('p');
+  submittedBy.className = 'post-submittedBy';
+  submittedBy.textContent = `By: ${post.submitted_by || 'Unknown'}`;
+
+  const createdAt = document.createElement('p');
+  createdAt.className = 'post-createdAt';
+
+  const date = new Date(post.created_at);
+  createdAt.textContent = `Created: ${date.toLocaleString()}`;
+
   wrapper.appendChild(title);
   wrapper.appendChild(content);
+  wrapper.appendChild(category);
+  wrapper.appendChild(submittedBy);
+  wrapper.appendChild(createdAt);
 
   return wrapper;
 }

@@ -186,6 +186,22 @@ textarea {
   margin: 0 0 10px 0;
 }
 
+/* content */
 .post-content {
+  margin: 0;
+}
+
+/* category */
+.post-category {
+  margin: 0;
+}
+
+/* submitted By */
+.post-submittedBy {
+  margin: 0;
+}
+
+/* created At */
+.post-createdAt {
   margin: 0;
 }
