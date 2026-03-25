@@ -161,7 +161,8 @@ fieldset {
 /* index.html */
 .register-btn,
 .logout-btn,
-.login-btn {
+.login-btn,
+.create-post-btn {
   cursor: pointer;
 }
 /* index.html */
@@ -244,4 +245,25 @@ textarea {
 .post-submittedBy,
 .post-createdAt {
   margin: 0;
+}
+
+/* input-title, input-category / in index.html*/
+.input-title,
+.input-category {
+  padding: 5px;
+}
+
+/* input-category / in index.html*/
+.input-category {
+  margin-bottom: 15px;
+}
+
+/* index.html */
+.create-post-btn,
+.register-btn,
+.login-btn {
+  padding: 6px;
+}
+.create-post-btn {
+  margin-bottom: 40px;
 }
