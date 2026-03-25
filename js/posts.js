@@ -47,17 +47,15 @@ if (postForm) {
     try {
       fieldset.disabled = true;
 
-      const { error } = await supabase
-        .from('posts')
-        .insert([
-          {
-            title,
-            content,
-            category,
-            submitted_by: user.email,
-            user_id: user.id,
-          },
-        ]);
+      const { error } = await supabase.from('posts').insert([
+        {
+          title,
+          content,
+          category,
+          submitted_by: user.email,
+          user_id: user.id,
+        },
+      ]);
 
       if (error) {
         displayMessage('#js-message-container', 'error', error.message);
@@ -135,6 +133,8 @@ function createPostElement(post) {
   content.className = 'post-content';
   content.textContent = post.content;
 
+  const dividingline = document.createElement('hr');
+
   const category = document.createElement('p');
   category.className = 'post-category';
   category.textContent = `Category: ${post.category || 'None'}`;
@@ -151,6 +151,7 @@ function createPostElement(post) {
 
   wrapper.appendChild(title);
   wrapper.appendChild(content);
+  wrapper.appendChild(dividingline);
   wrapper.appendChild(category);
   wrapper.appendChild(submittedBy);
   wrapper.appendChild(createdAt);
