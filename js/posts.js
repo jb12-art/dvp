@@ -14,13 +14,14 @@ const registerLink = document.querySelector('.register-link');
 const logoutBtn = document.querySelector('#js-logout-btn');
 const postForm = document.querySelector('.create-post-form');
 
+// auth logic
 // toggle UI based on login/logout
 if (user) {
-  // logged in
+  // logged in - show only logged-in UI
   if (loginLink) loginLink.style.display = 'none';
   if (registerLink) registerLink.style.display = 'none';
 } else {
-  // logged out
+  // logged out - show only logged-out UI
   if (logoutBtn) logoutBtn.style.display = 'none';
   if (postForm) postForm.style.display = 'none';
 }
