@@ -1,5 +1,39 @@
 /* css/styles.css */
 
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Tablet view */
+@media (min-width: 600px) {
+  .create-post-form {
+    padding: 20px;
+  }
+
+  .register-link,
+  .login-link {
+    max-width: 400px;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 900px) {
+  .create-post-form {
+    max-width: 700px;
+  }
+
+  #posts-list {
+    max-width: 700px;
+  }
+}
+
+/*  */
+/* Under is *Mobile view* that is handled by flexible width's*/
+/*  */
+
 /* index.html, register.html, login.html */
 .logo-home-link {
   font-size: xx-large;
@@ -14,6 +48,7 @@ body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* index.html, register.html, login.html */
@@ -61,8 +96,11 @@ main {
   margin: 0 auto;
   display: grid;
   border: solid 1px black;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 100px;
+  box-sizing: border-box;
+  padding: 20px;
   place-items: center;
 }
 /* index.html */
@@ -94,19 +132,30 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  padding: 20px;
 }
 /* register.html, login.html */
 .register-form,
 .login-form {
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  width: 100%;
+  max-width: 500px;
+}
+/* register.html, login.html */
+fieldset {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 /* register.html, login.html */
 .register-input,
 .login-input {
-  width: 400px;
+  width: 100%;
   margin-bottom: 15px;
   border: solid 1px black;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 /* index.html */
@@ -128,14 +177,16 @@ main {
 /* index.html */
 .create-post-form {
   margin: 0 auto;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 /* index.html */
 textarea {
-  width: 700px;
-  max-width: 692px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* error and success messages on all pages */
@@ -168,7 +219,8 @@ textarea {
 /* posts.js, view in index.html */
 /* posts container */
 #posts-list {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -186,22 +238,10 @@ textarea {
   margin: 0 0 10px 0;
 }
 
-/* content */
-.post-content {
-  margin: 0;
-}
-
-/* category */
-.post-category {
-  margin: 0;
-}
-
-/* submitted By */
-.post-submittedBy {
-  margin: 0;
-}
-
-/* created At */
+/* content, category, submitted By, created At  */
+.post-content,
+.post-category,
+.post-submittedBy,
 .post-createdAt {
   margin: 0;
 }
